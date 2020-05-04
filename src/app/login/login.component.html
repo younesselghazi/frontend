@@ -1,0 +1,51 @@
+<div class="body" style="padding-top: 5%;">
+
+<div *ngIf="!isLogged" class="container" style="border-radius: 25px; border: 2px solid #3F51B5; width: 90%; height: 60%;padding-left: 1%;padding-top: 1%; box-shadow: 10px 10px 5px black;background: rgb(255, 255, 255, 0.8)">
+  <img src="../../assets/adminavatar.png" style="height: 150px; padding-left: 41.5%;top: 30%;">
+  <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate style="padding-top: 7%;">
+    <h1 class="h3 mb-3 font-weight-normal" style="padding-left: 42%; top: -10%;">S'identifier</h1>
+    <div class="form-group">
+      <label for="inputUsername" class="sr-only">Username</label>
+      <input type="text" id="inputUsername" [formControlName]="'username'" class="form-control" placeholder="Username" required="" autofocus="">
+    </div>
+    <!--<div class="form-group">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" [formControlName]="'password'" class="form-control" placeholder="Password" required="">
+    </div>-->
+  
+  <div id="passdiv" class="form-group">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" [formControlName]="'password'" class="form-control" placeholder="Password" required="">
+  </div>
+    <div style="padding-left: 43%;">
+    <button class="btn btn-success" type="submit" style="padding-left: 5%; padding-right: 5%;background-color: #3F51B5;"> Sign in</button></div>
+  </form> 
+
+
+<div *ngIf="isLogged" class="container" style="border-radius: 25px; border: 2px solid #3F51B5; width: 90%; height: 20%;padding-left: 1%;padding-top: 1%; box-shadow: 10px 10px 5px black;background: rgb(255, 255, 255, 0.8)"><h2 style="padding-left: 6.5%; padding-top: 4%;">Vous etes deja connecté! Cliquez <button class="btn btn-success" (click)="goBackToMain()" style="padding-left: 5%; padding-right: 5%;background-color: #3F51B5;">ICI</button>  vers le tableau de board </h2>
+</div>
+</div>
+<!--
+  <div class="container">
+    <form (ngSubmit)="onSubmit()" class="ui form" [hidden]="loginService.checkLogin()">
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" required [(ngModel)]="model.username" ngControl="username" placeholder="Username" name="username" required><br>
+      </div>
+  
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" required [(ngModel)]="model.password" ngControl="password" placeholder="password" name="password" required>
+      </div>
+  
+      <button type="submit" class="ui button">Submit</button>
+    </form>
+  
+    <div [hidden]="!loginService.checkLogin()">
+      <h3>Logged In Successfully! </h3>
+      <h2>Welcome back, {{currentUserName}}!</h2>
+    </div>
+  
+  </div>
+  
+-->

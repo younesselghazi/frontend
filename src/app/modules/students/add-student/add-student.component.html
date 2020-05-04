@@ -1,0 +1,71 @@
+<div style="border-radius: 25px; border: 2px solid #3F51B5; width: 90%; height: 70%;margin-left: 5%;margin-top: 3%; box-shadow: 10px 10px 5px grey;background-color: white;">
+    <div class="pagewrap" style="padding-left: 20%;">
+        <h1 style="padding-left: 23%;">Ajouter étudiant </h1>
+        <br>
+        <br>
+    <form #receivedStudent="ngForm">
+        <div style="padding-left: 6%;">
+            <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="firstName">Prenom</mat-label>
+                    <input matInput type="text" class="form-control" id="firstName" placeholder="Prenom" [(ngModel)]="student.firstName"
+                        name="firstName" required>
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+            <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="lastName">Nom</mat-label>
+                    <input matInput type="text" class="form-control" id="lastName" placeholder="Nom" [(ngModel)]="student.lastName"
+                        name="lastName" required>
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+            <mat-form-field [floatLabel]="'auto'" style="width: 300px;">
+                <mat-label for="email">Email</mat-label>
+                    <input matInput type="text" class="form-control" id="email" placeholder="Ex: test@test.com" [(ngModel)]="student.email"
+                        name="email" required>
+            </mat-form-field>
+        </div>
+            <br>
+    <div style="margin-left: 6%;">
+            <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="gender">Sexe</mat-label>
+                    <input matInput type="text" class="form-control" id="gender" placeholder="M(Masculin) ou F(Féminin)" [(ngModel)]="student.gender"
+                        name="gender" required>
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+            <mat-form-field>
+                <mat-label for="classe">Classe</mat-label>
+                    <input matInput type="text" class="form-control" id="classe" placeholder="Ex: gi2" [(ngModel)]="student.classe"
+                        name="classe" required>
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+            <mat-form-field [floatLabel]="'auto'" style="width: 300px;">
+                <mat-label for="phone">Tel</mat-label>
+                    <input matInput type="text" class="form-control" id="phone" placeholder="Ex: 0601020304" [(ngModel)]="student.phone"
+                        name="phone" required>
+            </mat-form-field>
+        </div>
+<br><br>
+        <mat-form-field style="margin-left: 27%;">
+            <mat-label>Date de naissance</mat-label>
+            <input matInput [(ngModel)]="student.birthday" name="birthday" [matDatepicker]="picker" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <div class="form-group" *ngIf="student.id == null">
+            <br>
+            <div style="padding-left: 18%;">
+            <input type="file" (change)="onFileChanged($event)"> Max. 50kb
+            <img [src]="imgURL" height="100" width="100" *ngIf="imgURL">
+        </div>
+            <br>
+            <br>
+            <div style="padding-left: 29%;">
+                <button type="button" class="btn btn-success" (click)="addStudent()" style="padding-left: 5%; padding-right: 5%;background-color: #3F51B5;">Save</button>
+                </div>
+        </div>
+    </form>
+</div>

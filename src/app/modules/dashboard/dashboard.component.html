@@ -1,0 +1,54 @@
+<div class="pagewrap">
+    <mat-grid-list role="list" cols="2" rowHeight="fit" style="height: 150px;" rowWidth="fit" gutterSize="10px">
+        <mat-grid-tile role="listitem">
+            <mat-card class="fgl">
+                <mat-card-header>
+                    <span class="icons" style="margin-left: 60px; background-color: #3F51B5;"><i mat-card-image class="flaticon-student" style="margin-left: 2px;"></i></span>
+
+                    <mat-card-title>Nombre des étudiants</mat-card-title>
+                    <mat-card-subtitle>{{nOS}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile role="listitem">
+            <mat-card class="fgl">
+                <mat-card-header>
+                    <span class="icons" style="margin-left: 80px; background-color: #3F51B5;"><i mat-card-image class="flaticon-teacher" style="margin-left: -3px;"></i></span>
+
+                    <mat-card-title>Nombre des profs</mat-card-title>
+                    <mat-card-subtitle>{{nOT}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list role="list" cols="2" rowHeight="fit" style="height: 600px;">
+        <mat-grid-tile role="listitem">
+            <mat-card class="sgl">
+                <mat-card-header class="container row">
+                    <mat-card-title class="col-sm-5">Statistiques (étudiants)
+                        
+                    </mat-card-title>
+                    
+                </mat-card-header>
+                <br>
+                <br>
+                <app-widget-area></app-widget-area>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile role="listitem">
+            <mat-card class="sgl">
+                <mat-card-header class="container row">
+                    <mat-card-title class="col-sm-5">Statistiques (profs)
+                        
+                    </mat-card-title>
+                    
+                </mat-card-header>
+                <br>
+                <br>
+                <app-widget-area1></app-widget-area1>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</div>

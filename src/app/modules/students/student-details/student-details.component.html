@@ -1,0 +1,37 @@
+<div class="studentDetails" style="width: 60%; margin-left: 19%; margin-top: 5%; border-radius: 25px; border: 2px solid #3F51B5; box-shadow: 10px 10px 5px grey; background-color: white;">
+    <h2 style="padding-left: 15%;padding-top: 3%;">Informations sur l'étudiant: {{student.firstName}} {{student.lastName}}</h2>
+    <br>
+        <img src="{{student.retrievedImage}}" height="200" width="200" style="margin-left: 37%;box-shadow: 10px 10px 5px grey;border-radius: 40px;">
+        <br><br><br>
+    <table class="table">
+        <tr>
+            <td style="width: 30px;">Id</td>
+            <td>Nom</td>
+            <td>Prenom</td>
+            <td>Email</td>
+            <td>Date de naissance</td>
+            <td>Sexe</td>
+            <td>Classe</td>
+        </tr>
+        <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.firstName}}</td>
+            <td>{{student.lastName}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.birthday}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.classe}}</td>
+        </tr>
+        
+        
+
+    </table>
+
+
+
+
+
+    <br>
+    <!-- <a class="btn btn-small" style="background-color: #3F51B5;" (click)="editStudent()">edit</a>
+    <a class="btn btn-small" style="background-color: #3F51B5;" (click)="deleteStudent()"> delete</a> -->
+</div>

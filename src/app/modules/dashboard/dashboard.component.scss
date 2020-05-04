@@ -1,0 +1,50 @@
+mat-grid-list {
+    margin-bottom: 10px;
+}
+ul li {
+    list-style: none;
+}
+.flex-spacer {
+    width: 100%;
+}
+.fgl {
+    width: 85%;
+}
+.sgl {
+    width: 90%;
+    height: 90%;
+}
+.menuBTN {
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.fsct {
+    margin-right: 300px;
+}
+.ssct {
+    margin-right: 250px;
+}
+.icons {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    line-height: 100px;
+    border-radius:50% ;
+    background-color: rgb(177, 96, 96);
+}
+
+.icons i::before {
+    margin-left: 20px;
+    font-size: 65px;
+    color: white;
+}
+
+.flaticon-student i::before {
+    margin-left: 27px;
+    font-size: 65px;
+    color: black;
+}
+

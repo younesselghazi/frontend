@@ -1,0 +1,97 @@
+<div style="border-radius: 25px; border: 2px solid #3F51B5; width: 90%; height: 70%;margin-left: 5%;margin-top: 3%; box-shadow: 10px 10px 5px grey;background-color: white;">
+    <div class="pagewrap" style="padding-left: 20%;">
+        <h1 style="padding-left: 23%;">Ajouter une note </h1>
+        <br>
+        <br>
+    <form #receivedStudent="ngForm">
+        <h2>Infos sur l'étudiant</h2>
+        <div style="padding-left: 8%;">
+            <!-- <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="id">ID</mat-label>
+                    <input matInput type="text" class="form-control" id="id" placeholder="Id de l'étudiant" [(ngModel)]="note.id"
+                        name="id" required>
+            </mat-form-field> -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="studentFirstName">Prenom</mat-label>
+                    <input matInput type="text" class="form-control" id="studentFirstName" placeholder="Prenom" [(ngModel)]="note.studentFirstName"
+                        name="studentFirstName" required> 
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+            <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="studentLastName">Nom</mat-label>
+                    <input matInput type="text" class="form-control" id="studentLastName" placeholder="Nom" [(ngModel)]="note.studentLastName"
+                        name="studentLastName" required>
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="subject">Matière</mat-label>
+                    <input matInput type="text" class="form-control" id="subject" placeholder="Ex: math" [(ngModel)]="note.subject"
+                        name="subject" required>
+            </mat-form-field>
+
+            <!-- <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="studentFullName">le nom complet</mat-label>
+                    <input matInput type="text" class="form-control" id="studentFullName" placeholder="fullname" [(ngModel)]="note.studentFullName"
+                        name="studentFullName" required value="{{note.studentLastName}}&nbsp;{{note.studentFirstName}}">
+            </mat-form-field> -->
+    
+        </div>
+            <br>
+    <div style="margin-left: 7%;">
+            
+
+            <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="semestre">Semestre</mat-label>
+                    <input matInput type="text" class="form-control" id="semestre" placeholder="Ex: 3" [(ngModel)]="note.semestre"
+                        name="semestre" required>
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+            <mat-form-field>
+                <mat-label for="classe">Classe</mat-label>
+                    <input matInput type="text" class="form-control" [(ngModel)]="note.classe"
+                        name="classe" required>
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+            <mat-form-field [floatLabel]="'auto'" style="width: 300px;">
+                <mat-label for="value">Note</mat-label>
+                    <input matInput type="text" class="form-control" id="value" placeholder="Ex: 16" [(ngModel)]="note.value"
+                        name="value" required>
+            </mat-form-field>
+        </div>
+<br><br>
+        <h2>Infos du prof</h2>
+        <div style="padding-left: 6%;">
+            <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="teacherFirstName">Prénom</mat-label>
+                    <input matInput type="text" class="form-control" id="teacherFirstName" placeholder="Prenom" [(ngModel)]="note.teacherFirstName"
+                        name="teacherFirstName" required>
+            </mat-form-field>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="teacherLastName">Nom</mat-label>
+                    <input matInput type="text" class="form-control" id="teacherLastName" placeholder="Nom" [(ngModel)]="note.teacherLastName"
+                        name="teacherLastName" required>
+            </mat-form-field>
+
+            <!-- <mat-form-field [floatLabel]="'auto'">
+                <mat-label for="teacherFullName">le nom complet</mat-label>
+                    <input matInput type="text" class="form-control" id="teacherFullName" placeholder="fullname" [(ngModel)]="note.teacherFullName"
+                        name="teacherFullName" required value="{{note.teacherLastName}}&nbsp;{{note.teacherFirstName}}">
+            </mat-form-field> -->
+          
+            </div>
+        
+            <br>
+            <br>
+            <div style="padding-left: 29%;">
+                <button type="button" class="btn btn-success" (click)="addNote()" style="padding-left: 5%; padding-right: 5%;background-color: #3F51B5;">Save</button>
+                </div>
+                <br>
+        
+    </form>
+    </div>
+</div>

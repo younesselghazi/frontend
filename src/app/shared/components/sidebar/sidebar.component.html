@@ -1,0 +1,76 @@
+<mat-nav-list>
+    <div class="profile-card">
+         <div class="header">
+         </div>
+         <a routerLink="/main"><img src="assets/logo.png"></a>
+     </div> 
+ 
+     <mat-divider></mat-divider>
+     <mat-accordion>
+         <mat-expansion-panel>
+             <mat-expansion-panel-header mat-list-item>
+                 <mat-icon style="position: relative; top:4px; font-size: 18px;">home</mat-icon>
+                 <span style="font-size: 15px; margin-left: 5px ;margin-top: 5px;">Main</span>
+ 
+             </mat-expansion-panel-header>
+             <a mat-list-item routerLinkActive="list-item-active" routerLink="/main"><span class="material-icons" style="font-size: 18px;">
+                 dashboard
+                 </span>Dashboard</a>
+         </mat-expansion-panel>
+         <mat-expansion-panel>
+             <mat-expansion-panel-header mat-list-item>
+                 <mat-icon style="position: relative; top:4px; font-size: 18px;">business_center</mat-icon>
+                 <span style="font-size: 15px; margin-left: 5px ;margin-top: 5px;">Les profs</span>
+             </mat-expansion-panel-header>
+             <a mat-list-item routerLinkActive="list-item-active" routerLink="/main/teachers"><span class="material-icons" style="font-size: 18px;">
+                 list
+                 </span>Liste Des Profs</a>
+             <a mat-list-item routerLinkActive="list-item-active" routerLink="/main/teachers/add-teacher"><span class="material-icons" style="font-size: 18px;">
+                 add_box
+                 </span>Ajouter Prof</a>
+         </mat-expansion-panel>
+         <mat-expansion-panel>
+             <mat-expansion-panel-header mat-list-item>
+                 <mat-icon style="position: relative; top:4px; font-size: 18px;">school</mat-icon>
+                 <span style="font-size: 15px; margin-left: 5px ;margin-top: 5px;">Etudiants</span>
+ 
+             </mat-expansion-panel-header>
+             <a mat-list-item routerLinkActive="list-item-active" routerLink="/main/students"><span class="material-icons" style="font-size: 18px;">
+                 list
+                 </span>Liste des etudiants</a>
+             <a mat-list-item routerLinkActive="list-item-active" routerLink="/main/students/add-student"><span class="material-icons" style="font-size: 18px;">
+                 add_box
+                 </span>Ajouter etudiant</a>
+         </mat-expansion-panel>
+ 
+         <mat-expansion-panel>
+             <mat-expansion-panel-header mat-list-item>
+                 <mat-icon style="position: relative; top:4px; font-size: 18px;">book</mat-icon>
+                 <span style="font-size: 15px; margin-left: 5px ;margin-top: 5px;">Notes</span>
+ 
+             </mat-expansion-panel-header>
+             <a mat-list-item routerLinkActive="list-item-active" routerLink="/main/notes"><span class="material-icons" style="font-size: 18px;">
+                list
+                </span>Notes details</a>
+             <a mat-list-item routerLinkActive="list-item-active" routerLink="/main/notes/add-notes"><span class="material-icons" style="font-size: 18px;">
+                add_box
+                </span>Ajouter notes</a>
+         </mat-expansion-panel>
+         
+         
+ 
+         <!-- <mat-expansion-panel>
+             <mat-expansion-panel-header>
+                 <mat-panel-title>
+                     uuidjid
+                 </mat-panel-title>
+             </mat-expansion-panel-header>
+             <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
+             <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
+             <a mat-list-item routerLinkActive="list-item-active" routerLink="/students">Students</a>
+             <a mat-list-item routerLinkActive="list-item-active" routerLink="/teachers">Teachers</a>
+         </mat-expansion-panel> -->
+     </mat-accordion>
+     <mat-divider></mat-divider>
+ 
+ </mat-nav-list>

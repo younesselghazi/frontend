@@ -1,0 +1,22 @@
+<div *ngIf="whichComponent == 'notes' ">
+    <h2 mat-dialog-title> Erreur </h2>
+    <mat-dialog-content> Pas d'étudiant de ce nom</mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close routerLink="/main/students/add-student"> Ajouter cet étudiant</button>
+        <button mat-button mat-dialog-close> Annuler </button>
+    </mat-dialog-actions>
+</div>
+<div *ngIf="whichComponent == 'teachers' ">
+    <h2 mat-dialog-title> Succès </h2>
+    <mat-dialog-content> Teacher a été supprimé </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close> Fermer </button>
+    </mat-dialog-actions>
+</div>
+<div *ngIf="whichComponent == 'students' ">
+    <h2 mat-dialog-title> Succès </h2>
+    <mat-dialog-content> student a été supprimé </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close> Fermer </button>
+    </mat-dialog-actions>
+</div>
